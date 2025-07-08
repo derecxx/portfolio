@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-card/95 backdrop-blur-md border-b border-border' : 'bg-transparent'
+      scrolled ? 'navbar-glass' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -41,14 +41,14 @@ const Navbar = () => {
             <h1 className="text-2xl font-bold gradient-text">Dikshant</h1>
           </div>
           
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
+            <div className="flex items-baseline space-x-8">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-foreground hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  className="text-foreground hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:bg-accent/10 backdrop-blur-sm"
                 >
                   {item.name}
                 </button>
@@ -62,6 +62,7 @@ const Navbar = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
+              className="backdrop-blur-sm"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -72,12 +73,12 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-card border-b border-border">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 glass-card border-t border-border/20">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-accent block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors duration-200"
+                className="text-foreground hover:text-accent block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 hover:bg-accent/10"
               >
                 {item.name}
               </button>

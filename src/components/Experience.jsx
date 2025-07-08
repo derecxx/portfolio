@@ -8,7 +8,7 @@ const Experience = () => {
     {
       title: "Vice President",
       organization: "SPEC NITH",
-      period: "Current",
+      period: "2024-2025",
       type: "Leadership",
       icon: <Users className="w-6 h-6" />,
       description: "Leading 80+ member tech club with exceptional results in event management and community building.",
@@ -24,7 +24,7 @@ const Experience = () => {
     {
       title: "Lead Organizer",
       organization: "ELECTROTHON 7.0",
-      period: "2024",
+      period: "March 2025",
       type: "Event Management",
       icon: <Trophy className="w-6 h-6" />,
       description: "Organized a Major League Hacking (MLH) powered Global Level Hackathon with international participation.",
@@ -40,7 +40,7 @@ const Experience = () => {
     {
       title: "Joint Secretary",
       organization: "Yoga Club NITH",
-      period: "2023-2024",
+      period: "2024-2025",
       type: "Wellness & Organization",
       icon: <Target className="w-6 h-6" />,
       description: "Promoted wellness and cross-institute engagement through organized yoga tournaments and workshops.",
@@ -56,7 +56,7 @@ const Experience = () => {
     {
       title: "Class Representative",
       organization: "CSE Department, NIT Hamirpur",
-      period: "2022-2023",
+      period: "2022-Present",
       type: "Academic Leadership",
       icon: <Calendar className="w-6 h-6" />,
       description: "Served as primary liaison between faculty and students, facilitating effective communication and problem resolution.",

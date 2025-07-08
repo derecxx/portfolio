@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AnimatedBackground from './components/AnimatedBackground';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -13,21 +14,24 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-background text-foreground">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <About />
-              <Experience />
-              <Projects />
-              <Skills />
-              <Contact />
-            </>
-          } />
-        </Routes>
-        <Footer />
+      <div className="min-h-screen bg-background text-foreground relative">
+        <AnimatedBackground />
+        <div className="relative z-10">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={
+              <>
+                <Hero />
+                <About />
+                <Experience />
+                <Projects />
+                <Skills />
+                <Contact />
+              </>
+            } />
+          </Routes>
+          <Footer />
+        </div>
       </div>
     </Router>
   );
